@@ -6,6 +6,8 @@ const connectDB = require('./config/db');
 const userRoutes = require('./routes/authRoutes');
 const postRoutes = require('./routes/postRoutes')
 
+// docker tag local-image:tagname new-repo:tagname
+// docker push new-repo:tagname
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -18,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: 'http://localhost:3000', 
+    origin: 'https://my-blog-front-one.vercel.app', 
     methods: 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
     credentials: true
 }));
