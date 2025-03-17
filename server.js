@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: 'https://my-blog-front-one.vercel.app', 
+    origin: 'https://my-blog-front-five.vercel.app', 
     methods: 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
     credentials: true
 }));
